@@ -10,7 +10,7 @@
  code{background:#f2f2f7;padding:1px 5px;border-radius:4px} a{color:#4b3fd0}
  .badge{display:inline-block;background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:8px}
 </style></head><body>
-<div class="badge">No ads · No tracking · No data collected</div>
+<div class="badge">No ads · No tracking · No data collected · No network permission</div>
 <h1>Privacy Policy — Meow Grid</h1>
 <p><strong>Effective date:</strong> October 14, 2026</p>
 <p><strong>Developer:</strong> Tudi Technology</p>
@@ -29,15 +29,18 @@
 <p>anywhere.</p>
 <p>This local data is deleted when you uninstall the App. You can also erase it</p>
 <p>at any time from inside the App: <strong>Settings → Reset all progress</strong>.</p>
-<h2>3. Permissions</h2>
-<p>The App requests <strong>only</strong> the permission it technically needs to run:</p>
-<table>
-<tr><th>Permission</th><th>Why</th></tr>
-<tr><td>`android.permission.INTERNET`</td><td>Included by the Flutter runtime. The App makes **no network requests** of its own.</td></tr>
-</table>
-<p>The App does <strong>not</strong> request access to your location, contacts, calendar,</p>
-<p>photos, camera, microphone, files, SMS, call logs, or your device&#x27;s</p>
-<p>advertising identifier.</p>
+<h2>3. Permissions — the App has no network access at all</h2>
+<p>The App declares <strong>no network permission</strong>. <code>android.permission.INTERNET</code> is</p>
+<p>deliberately absent, which means the operating system itself prevents the App</p>
+<p>from sending or receiving anything over the internet. It runs entirely</p>
+<p>offline.</p>
+<p>The App also does <strong>not</strong> request access to your location, contacts,</p>
+<p>calendar, photos, camera, microphone, files, SMS or call logs, and it does</p>
+<p>not read your device&#x27;s advertising identifier.</p>
+<p>The only other entry in its manifest is one internal Android permission used</p>
+<p>by the app framework for private, in-app broadcast receivers</p>
+<p>(<code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>). It grants no access to your data</p>
+<p>and no access to the network.</p>
 <h2>4. Children&#x27;s privacy</h2>
 <p>The App is a general-audience puzzle game suitable for all ages. Because the</p>
 <p>App collects no data at all, it collects no data from children either. There</p>
